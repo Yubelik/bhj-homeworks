@@ -5,11 +5,6 @@ let slideIndex = 0;
 
 function showSlide(n) {
   slideIndex = (n + slides.length) % slides.length;
-  // console.log("n = "+ n);
-  // console.log("slides.length = "+ slides.length);
-  // console.log("n + slides.length = "+ (n + slides.length));
-  // console.log("slideIndex = "+ slideIndex);
-  // slides[slideIndex].classList.remove("slider__item_active");
   slides.forEach(item => {
     item.classList.remove('slider__item_active');
   });
