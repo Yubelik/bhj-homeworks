@@ -15,4 +15,4 @@ items.forEach(item => {
       sublist.classList.toggle('menu_active'); // Переключаем класс у вложенного меню
     }
   });
-});git
+});
