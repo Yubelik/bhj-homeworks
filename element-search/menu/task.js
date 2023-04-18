@@ -1,24 +1,18 @@
-const menuLinks = document.querySelectorAll(".menu__item");
 
-menuLinks.forEach((link) => {
-  link.onclick = function() {
-    const menu = link.closest(".menu");
-    const subMenu = link.querySelector(".menu_sub");
-    const child = menu.querySelector(".menu_active");
-    const isActive = menu.contains(child);
+const items = Array.from(document.querySelectorAll('.menu__item'));
 
-    if (subMenu) {
-      subMenu.classList.add("menu_active");
-      return false;
+items.forEach(item => {
+  const link = item.querySelector('.menu__link');
+  link.addEventListener('click', (event) => {
+    event.preventDefault(); // Предотвращаем переход по ссылке
+    const sublist = item.querySelector('.menu_sub');
+    console.log("sublist = "+sublist.innerHTML);
+    if (sublist) {
+      const activeSublist = document.querySelector('.menu_active');
+      if (activeSublist && activeSublist !== sublist) {
+        activeSublist.classList.remove('menu_active'); // Закрываем предыдущее открытое меню
+      }
+      sublist.classList.toggle('menu_active'); // Переключаем класс у вложенного меню
     }
-    // console.log("isActive = " + isActive);
-    // if (isActive) {
-
-    //   menu.classList.remove(".menu_active");
-    // } else {
-      window.open( link.childNodes[1].href);
-      const menus = document.querySelectorAll(".menu");
-      menus.forEach((m) => m.classList.remove(".menu_active"));
-    // }
-   };
-});
+  });
+});git
