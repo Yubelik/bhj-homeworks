@@ -26,19 +26,7 @@ class Game {
         this.fail();
       }
     });
-
-    // document.addEventListener('keyup', (event) => {
-    //     const enteredSymbol = event.key.toLowerCase();
-    //     const currentSymbol = this.currentSymbol.textContent.toLowerCase();
-    //     console.log("enteredSymbol = "+enteredSymbol);
-    //     console.log("currentSymbol = "+currentSymbol);
-    //     if (enteredSymbol === currentSymbol) {
-    //       this.success();
-    //     } else {
-    //       this.fail();
-    //     }
-    //   });
-    }
+  }
     
   
 
