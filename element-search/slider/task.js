@@ -1,7 +1,7 @@
 const slides = document.querySelectorAll('.slider__item');
-const sliderWrapper = document.querySelector('.slider');
 const dots = document.querySelectorAll('.slider__dot');
-let slideIndex = 0;
+let slideIndex = Array.from(slides).findIndex(slide => slide.classList.contains('slider__item_active'));
+
 
 function showSlide(n) {
   slideIndex = (n + slides.length) % slides.length;
