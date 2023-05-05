@@ -37,9 +37,4 @@ xhr.onload = function() {
   }
 };
 
-xhr.onerror = function() {
-  loader.classList.remove('loader_active');
-  loader.classList.add('loader_inactive');
 
-  alert('Ошибка загрузки данных о курсе валют');
-}; 
