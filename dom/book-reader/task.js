@@ -15,8 +15,6 @@ function changeSize(i) {
 	if(i != 1) {
         book.classList.add(checkClass);
     }
-    
-	// return false
 }
 
 controls.forEach((element, index) => {
